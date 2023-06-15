@@ -9,9 +9,7 @@
 }
 
 body {
-    display: grid;
-    grid-template-rows: min-content 1fr min-content;
-    height: 100vh;
+    min-width: 350px;
 }
 
 .descuentos {
@@ -33,7 +31,7 @@ body {
     padding-left: 30px;
     align-items: center;
     margin-bottom: 40px;
-    font-size: 40px;
+    font-size: 35px;
     color: white;
 }
 
@@ -41,7 +39,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: scroll;
 }
 
 .section {
@@ -49,13 +46,14 @@ body {
     justify-content: space-around;
     text-align: center;
     gap: 40px;
-    width: 90%;
-    flex-flow: row wrap;
+    width: 100%;
+    flex-flow: wrap;
 }
 
 .card {
     width: 350px;
     height: 600px;
+    min-width: 330px;
     position: relative;
     background-color: #F3F3F3;
     border-top-left-radius: 20px;
@@ -112,27 +110,30 @@ body {
 .plus {
     display: flex;
     position: fixed;
-    color: white;
-    background-color: #00669F;
-    width: 20px;
-    height: 20px;
-    font-weight: bold;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 1.5em;
     right: 10px;
-    padding: 20px;
-    top: 50%;
-    cursor: pointer;
+    top: 45%;
+}
+
+.plus img {
+    width: 40px;
+}
+
+.plus img:hover {
+    border-radius: 50%;
+    width: 41px;
+    box-shadow: 0px 1px 2px black;
 }
 
 .footer {
     display: flex;
-    position: relative;
+    position: sticky;
+    flex-wrap: wrap;
+    width: 100%;
+    bottom: 0px;
     height: 51px;
     background: #00669F;
     color: white;
+    font-size: 0.8em;
     align-items: center;
     justify-content: center;
     padding-left: 2em;
@@ -153,6 +154,19 @@ body {
     };
 }
 
-@media (max-width: 460px) {
+@media (max-width: 550px) {
+    
+    .footer {
+        
+        display: block;
+        gap: 20px;
+        padding: 10px;
+        height: auto;
+    }
 
+    .footer .github {
+        position:unset;
+        width: 75px;
+    }
+    
 }
